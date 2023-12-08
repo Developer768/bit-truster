@@ -3,6 +3,7 @@ import { Roboto, Roboto_Slab, Assistant } from "next/font/google";
 import "\../styles/globals.css"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 
 const roboto = Roboto({ weight: ["100","300","400","500","700","900"], subsets: ["latin"], display: "swap",variable: '--font-roboto', });
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Toaster />
         </body>
     </html>
   );

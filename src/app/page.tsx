@@ -16,7 +16,7 @@ export default function Home  () {
               </h1>
               <h6 className="text-[16px] leading-[16px] font-bold mb-5">by BitTruster</h6>
               <div className="register-action clipped-btn bg-red text-white hover:bg-white hover:text-black cursor-pointer w-fit py-[15px] px-[30px] text-[20px] leading-none font-semibold">
-                <Link href={"#"}>
+                <Link href={"/discount-code-registeration"}>
                   Register Now
                 </Link>
               </div>
@@ -31,7 +31,7 @@ export default function Home  () {
               </h1>
               <h6 className="text-[16px] leading-[16px] font-bold mb-5 text-white">by BitTruster</h6>
               <div className="download-action clipped-btn bg-white text-black hover:bg-red hover:text-white cursor-pointer w-fit py-[15px] px-[30px] text-[20px] leading-none font-semibold">
-                <Link href={"#"}>
+                <Link target="_blank" href={"https://bittruster.lpages.co/everything-you-need-to-know-about-bitlocker/"}>
                   Download Ebook
                 </Link>
               </div>

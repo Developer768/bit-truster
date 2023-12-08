@@ -6,7 +6,7 @@ const Support = () => {
     <main className="Support-Page font-assistant text-black">
       {/* Page Header */}
       <section className="header bg-[url(/assets/images/Support_Page_Header.png)] bg-cover bg-center py-[50px] relative flex items-center justify-center">
-        <div className="overlay absolute top-0 bg-black opacity-50 w-full h-full z-[1]"></div>
+        <div className="overlay absolute top-0 bg-black opacity-60 w-full h-full z-[1]"></div>
         <div className="title text-white w-full h-full flex items-center justify-center text-[48px] leading-[48px] font-bold z-10 p-[10px] text-center min-h-[180px]">
           About Us
         </div>

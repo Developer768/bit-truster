@@ -10,14 +10,14 @@ const AboutUs = () => {
     <main className="Product-Page font-assistant text-black">
       {/* Page Header */}
       <section className="header bg-[url(/assets/images/Aboutus_Page_Header.png)] bg-cover bg-center py-[50px] relative flex items-center justify-center">
-        <div className="overlay absolute top-0 bg-black opacity-50 w-full h-full z-[1]"></div>
+        <div className="overlay absolute top-0 bg-black opacity-60 w-full h-full z-[1]"></div>
         <div className="title text-white w-full h-full flex items-center justify-center text-[48px] leading-[48px] font-bold z-10 p-[10px] text-center min-h-[180px]">
           About Us
         </div>
       </section>
 
       {/* overview */}
-      <section className="company-overview p-[50px]">
+      <section id="company-overview" className="company-overview p-[50px]">
         <h2 className="text-black font-bold text-[45px] leading-[45px] mb-[20px]">
           Company Overview
         </h2>
@@ -90,13 +90,13 @@ const AboutUs = () => {
 
       {/* Sliders */}
       <section className="customers-partners-slider p-[50px]">
-        <h2 className="text-black font-bold text-[45px] leading-[45px] mb-[20px]">
+        <h2 id="Customers" className="text-black font-bold text-[45px] leading-[45px] mb-[20px]">
         Customers
         </h2>
         <div className="w-full">
           <CustomersSlider />
         </div>
-        <h2 className="text-black font-bold text-[45px] leading-[45px] mb-[20px]">
+        <h2 id="Partners" className="text-black font-bold text-[45px] leading-[45px] mb-[20px]">
         Partners
         </h2>
         <div className="w-full">

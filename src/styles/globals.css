@@ -73,6 +73,9 @@
 }
  
 @layer base {
+  html {
+    @apply scroll-smooth
+  }
   * {
     @apply border-border;
   }
@@ -118,3 +121,6 @@
   color: black;
 }
 
+.swiper-slide {
+  height: auto !important;
+}
