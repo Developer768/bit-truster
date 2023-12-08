@@ -38,6 +38,7 @@ const ContactUsForm: React.FC = () => {
 
       // console.log("Result =>", data.status);
       if (data.status === "Sent") {
+        console.log(data.status)
         toast({
           title: "Success",
           description:
