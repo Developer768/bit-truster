@@ -1,7 +1,57 @@
 import Post from '@/components/Post'
 import React from 'react'
 
-const Blogs = () => {
+async function getPosts() {
+  const query = `
+  {
+    posts(first: 3) {
+      nodes {
+        title
+        excerpt
+        featuredImage {
+          node {
+            mediaItemUrl
+          }
+        }
+        content
+        slug
+        date
+        author {
+          node {
+            avatar {
+              url
+            }
+            name
+          }
+        }
+      }
+    }
+  }
+    `;
+
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT}?query=${encodeURIComponent(
+      query
+    )}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      next: {
+        revalidate: 0,
+      },
+    }
+  );
+
+  const { data } = await res.json();
+
+  return data.posts.nodes;
+}
+
+const Blogs = async() => {
+  const posts = await getPosts();
+    console.log(posts)
   return (
     <main className="Start-A-Free-Trial-Page font-assistant text-black">
       {/* Page Header */}
@@ -15,12 +65,11 @@ const Blogs = () => {
       {/* Imprint | Impressum */}
       <section className="blogs padding ">
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-3 gap-[30px]">
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+      {
+      posts.map((post)=>(
+        <Post key={post.title} title={post.title} featuredImage={post.featuredImage} excerpt={post.excerpt} date={post.date} slug={post.slug} author={post.author.node} />
+      ))
+    }
           </div>
       </section>
       </main>

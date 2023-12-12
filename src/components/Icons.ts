@@ -6,6 +6,9 @@ import {
   Linkedin,
   ChevronLeft,
   ChevronRight,
+  CircleUserRound,
+  Tags,
+  Calendar,
 } from "lucide-react";
 
 export const Icons = {
@@ -15,6 +18,9 @@ export const Icons = {
   linkedin: Linkedin,
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
+  CircleUserRound: CircleUserRound,
+  Tags: Tags,
+  Calendar: Calendar,
   // list: (props: LucideProps) => (
   //   <svg
   //     xmlns="http://www.w3.org/2000/svg"

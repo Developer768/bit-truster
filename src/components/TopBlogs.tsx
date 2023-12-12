@@ -1,16 +1,30 @@
-
+"use client"
 import React from "react";
 import Post from "./Post";
-import { Suspense } from "react";
 
 async function getPosts() {
     const query = `
     {
-      posts(first: 5) {
+      posts(first: 3) {
         nodes {
           title
+          excerpt
+          featuredImage {
+            node {
+              mediaItemUrl
+            }
+          }
           content
-          uri
+          slug
+          date
+          author {
+            node {
+              avatar {
+                url
+              }
+              name
+            }
+          }
         }
       }
     }
@@ -43,9 +57,11 @@ const TopBlogs: React.FC = async() => {
 
   return (
     <>
-      <Post />
-      <Post />
-      <Post />
+    {
+      posts.map((post)=>(
+        <Post key={post.title} title={post.title} featuredImage={post.featuredImage} excerpt={post.excerpt} date={post.date} slug={post.slug} author={post.author.node} />
+      ))
+    }
     </>
   );
 };
