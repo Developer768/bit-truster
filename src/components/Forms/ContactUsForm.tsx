@@ -146,7 +146,7 @@ const ContactUsForm: React.FC = () => {
               <FormControl>
               <Textarea
                   placeholder={"Message*"}
-                  className="bg-white  py-[6px] px-[16px] rounded-none border-[3px] border-[#B1B1B1]  placeholder:text-textGrey text-[16px] leading-[22px]"
+                  className="bg-white  py-[6px] px-[16px] rounded-none border-[3px] border-[#B1B1B1]  placeholder:text-textGrey focus-visible:ring-red text-[16px] leading-[22px]"
                   {...field}
                 />
               </FormControl>

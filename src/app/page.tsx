@@ -1,6 +1,6 @@
-import Post from "@/components/Post";
 import StatsSec from "@/components/StatsSec";
 import TestimonialsSec from "@/components/TestimonialsSec";
+import TopBlogs from "@/components/TopBlogs";
 import Link from "next/link";
 
 export default function Home  () {
@@ -60,9 +60,7 @@ export default function Home  () {
         <div className="blog-posts max-w-[1536px] mx-auto mt-[20px]">
 
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-3 gap-[30px]">
-            <Post />
-            <Post />
-            <Post />
+            <TopBlogs />
           </div>
 
         </div>
