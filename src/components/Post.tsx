@@ -28,7 +28,7 @@ const Post: React.FC<Props> = ({title="",featuredImage,excerpt="",slug="",date,a
     <div className="post post_shadow rounded-xl p-5 bg-white">
       <div className="relative mb-[30px]">
 
-        <Link href={"/"+slug} className="">
+        <Link href={"/blogs/"+slug} className="">
           <img
             src={featuredImage.node.mediaItemUrl}
             alt="post-img"
@@ -51,7 +51,7 @@ const Post: React.FC<Props> = ({title="",featuredImage,excerpt="",slug="",date,a
       </div>
       <div className="mt-[50px] content">
         <h3 className="post-title text-[20px] leading-[24px] text-black font-semibold mb-[25px] line-clamp-2">
-          <Link href={"/"+slug}>
+          <Link href={"/blogs/"+slug}>
             {/* Everything You Need to Know About Microsoft BitLocker */}
             {title}
           </Link>
@@ -71,7 +71,7 @@ const Post: React.FC<Props> = ({title="",featuredImage,excerpt="",slug="",date,a
         </p> */}
         <div className="mb-5">
           <Link
-            href={"/"+slug}
+            href={"/blogs/"+slug}
             className="uppercase underline text-red font-medium text-[18px] leading-[27px]"
           >
             View Details

@@ -1,4 +1,4 @@
-"use client"
+
 import React from "react";
 import Post from "./Post";
 
@@ -50,8 +50,28 @@ async function getPosts() {
     return data.posts.nodes;
   }
 
+  type PostType = {
+    title: string,
+    featuredImage: {
+      node: {
+        mediaItemUrl: string,
+      }
+    },
+    excerpt: string ,
+    slug: string,
+    date: string,
+    author: { 
+      node: {
+        avatar : {
+          url:string,
+        }
+        name: string,
+      }
+     }
+  }
+
 const TopBlogs: React.FC = async() => {
-    const posts = await getPosts();
+    const posts:PostType[] = await getPosts();
     console.log(posts)
 
 

@@ -91,17 +91,25 @@ const BlogPost = async({ params }: { params: { slug: string } }) => {
                 <div className="flex items-center flex-wrap gap-3">
                     <div className="user flex items-center gap-3">
                         <Icons.CircleUserRound className='text-red'/>
+                        <Link href={"/blogs/author/"+post.author.node.name}>
+
                         <p className="text-textGrey text-[16px] leading-[24px]">By {post.author.node.name}</p>
+                        </Link>
                     </div> |
                     <div className="category flex items-center gap-3">
                         <Icons.Tags className='text-red'/>
                         {post.categories.nodes.map((category)=>(
+                          <Link href={"/blogs/category/"+category.name}>
+
                         <p className="text-textGrey text-[16px] leading-[24px]">{category.name}</p>
+                          </Link>
                         ))}
                     </div> |
                     <div className="category flex items-center gap-3">
                         <Icons.Calendar className='text-red'/>
+                        <Link href={"/blogs/date/"+post.date.substring(0,10)}>
                         <p className="text-textGrey text-[16px] leading-[24px]">{moment(post.date).format('MMMM Do YYYY')}</p>
+                        </Link>
                     </div>
                 </div>
             </div>
