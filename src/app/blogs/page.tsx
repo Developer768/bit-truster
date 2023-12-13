@@ -4,7 +4,7 @@ import React from 'react'
 async function getPosts() {
   const query = `
   {
-    posts(first: 3) {
+    posts {
       nodes {
         title
         excerpt

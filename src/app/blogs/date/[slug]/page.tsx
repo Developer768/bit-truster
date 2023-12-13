@@ -5,7 +5,7 @@ import React from 'react'
 async function getPosts(slug:string) {
     const query = `
     {
-        posts(where: {dateQuery: {compare: "${slug}"}}) {
+        posts(where: {dateQuery: {day: ${slug}}}) {
             nodes {
               title
               excerpt
@@ -51,8 +51,8 @@ async function getPosts(slug:string) {
   }
 
 const PostsbyDate = async({ params }: { params: { slug: string } }) => {
-    const posts = await getPosts(params.slug);
-    console.log(posts)
+    const posts = await getPosts(params.slug.substring(8,10));
+    console.log(params.slug.substring(8,10))
   return (
     <main className="Start-A-Free-Trial-Page font-assistant text-black">
       {/* Page Header */}
