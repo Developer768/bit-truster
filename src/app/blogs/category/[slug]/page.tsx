@@ -21,6 +21,7 @@ async function getPosts(slug:string) {
                   avatar {
                     url
                   }
+                  name
                 }
               }
             }

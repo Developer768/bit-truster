@@ -24,6 +24,7 @@ type Props = {
 
 const Post: React.FC<Props> = ({title="",featuredImage,excerpt="",slug="",date,author}) => {
   // const {node:{mediaItemUrl}} = featuredImage;
+  console.log(author)
   return (
     <div className="post post_shadow rounded-xl p-5 bg-white">
       <div className="relative mb-[30px]">
